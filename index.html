@@ -7,26 +7,23 @@
 <meta name="description" content="A step-by-step couples massage guide to help you reconnect through touch, tonight.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:        #f7f2ea;
-    --bg-deep:   #efe6d8;
-    --surface:   #ffffff;
-    --line:      #e7dcc9;
-    --ink:       #2a1c14;
-    --ink-dim:   #6b5a4d;
-    --wine:      #7a2420;
-    --wine-deep: #591815;
-    --gold:      #a9762f;
-    --gold-soft: #c99a4e;
-    --card-bg:   #ffffff;
-    --emerald:   #1c8f5e;
-    --emerald-deep:#125f3d;
+    --bg:        #4a0e10;
+    --bg-deep:   #380a0b;
+    --surface:   #5c1416;
+    --line:      rgba(255,214,150,.18);
+    --ink:       #f7ece0;
+    --ink-dim:   #d9b8ae;
+    --gold:      #e9b85c;
+    --gold-soft: #f3d28c;
+    --gold-deep: #b8842e;
+    --card-bg:   #f6efdf;
+    --card-ink:  #3a2213;
 
     --serif: 'Fraunces', serif;
     --sans:  'Inter', sans-serif;
-    --mono:  'Space Mono', monospace;
   }
 
   *{ box-sizing:border-box; margin:0; padding:0; }
@@ -43,13 +40,13 @@
   a{ color:inherit; }
   .wrap{ max-width:760px; margin:0 auto; padding:0 clamp(20px,5vw,24px); }
   section{ position:relative; z-index:1; }
-  h1,h2,h3{ font-family:var(--serif); letter-spacing:-0.01em; color:var(--wine-deep); }
+  h1,h2,h3{ font-family:var(--serif); letter-spacing:-0.01em; }
 
   .eyebrow{
-    font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase;
-    color:var(--gold); display:flex; align-items:center; gap:10px; margin-bottom:16px; justify-content:center;
+    font-family:var(--sans); font-weight:700; font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--gold-soft); display:flex; align-items:center; gap:10px; margin-bottom:16px; justify-content:center;
   }
-  .eyebrow::before{ content:''; width:24px; height:1px; background:var(--gold); opacity:.7; }
+  .eyebrow::before{ content:''; width:24px; height:1px; background:var(--gold-soft); opacity:.7; }
 
   /* ---------- Buttons ---------- */
   .btn{
@@ -60,70 +57,71 @@
     white-space:nowrap; width:100%; max-width:420px;
   }
   .btn-primary{
-    background:linear-gradient(160deg, #2bb377, var(--emerald) 55%, var(--emerald-deep));
-    color:#ffffff;
-    box-shadow:0 10px 26px -8px rgba(18,95,61,.45), inset 0 1px 0 rgba(255,255,255,.25);
-    border:1px solid rgba(255,255,255,.2);
+    background:linear-gradient(180deg, var(--gold-soft), var(--gold) 55%, var(--gold-deep));
+    color:#3a2213;
+    box-shadow:0 10px 26px -8px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.5);
+    border:1px solid rgba(255,255,255,.25);
   }
-  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -8px rgba(18,95,61,.55); }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -8px rgba(0,0,0,.55); }
   .btn-row{ display:flex; justify-content:center; }
 
   /* ---------- Header ---------- */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(247,242,234,.88); backdrop-filter:blur(10px);
+    background:rgba(56,10,11,.85); backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
   header .wrap{ display:flex; align-items:center; justify-content:space-between; padding:16px clamp(20px,5vw,24px); max-width:760px; }
-  .logo{ font-family:var(--serif); font-size:19px; color:var(--wine-deep); }
+  .logo{ font-family:var(--serif); font-size:19px; }
   .logo span{ color:var(--gold); }
   header .btn{ padding:11px 20px; font-size:13.5px; width:auto; }
 
   /* ---------- Hero ---------- */
-  .hero{ padding:56px 0 36px; text-align:center; }
+  .hero{ padding:56px 0 40px; text-align:center; }
   .hero h1{
-    font-size:clamp(28px, 5.4vw, 40px); line-height:1.16; margin-bottom:18px;
+    font-size:clamp(28px, 5.4vw, 40px); line-height:1.18; margin-bottom:20px;
   }
   .hero .stat-line{
-    font-family:var(--mono); font-size:13px; letter-spacing:.03em; color:var(--gold);
-    background:rgba(169,118,47,.08); border:1px solid rgba(169,118,47,.25);
-    display:inline-block; padding:10px 18px; border-radius:100px; margin-bottom:22px;
+    font-family:var(--sans); font-weight:700; font-size:14px; color:var(--gold-soft);
+    background:rgba(233,184,92,.1); border:1px solid rgba(233,184,92,.3);
+    display:inline-block; padding:10px 20px; border-radius:100px; margin-bottom:22px;
   }
-  .hero .stat-line b{ color:var(--wine-deep); font-family:var(--sans); font-weight:700; }
-  .hero p.lead{ font-size:15.5px; color:var(--ink-dim); margin-bottom:8px; max-width:520px; margin-left:auto; margin-right:auto; }
+  .hero .stat-line b{ color:#fff; }
+  .hero p.lead{ font-family:var(--sans); font-weight:500; font-size:16px; color:var(--ink); margin-bottom:8px; max-width:540px; margin-left:auto; margin-right:auto; }
 
   /* ---------- Video block ---------- */
   .video-block{
     margin:32px auto 10px; max-width:520px; aspect-ratio:16/10; border-radius:18px;
-    background:linear-gradient(160deg, #241512, #120a08);
+    background:linear-gradient(160deg, #241012, #120708);
     border:1px solid var(--line);
     display:flex; align-items:center; justify-content:center; position:relative;
     overflow:hidden;
   }
   .video-block .play{
     width:64px; height:64px; border-radius:50%;
-    background:linear-gradient(180deg, var(--gold-soft), var(--gold));
+    background:linear-gradient(180deg, var(--gold-soft), var(--gold-deep));
     display:flex; align-items:center; justify-content:center; cursor:pointer;
     box-shadow:0 10px 24px -6px rgba(0,0,0,.5);
   }
   .video-block .play::after{
     content:''; border-style:solid; border-width:9px 0 9px 15px;
-    border-color:transparent transparent transparent #2a1c14; margin-left:4px;
+    border-color:transparent transparent transparent #3a2213; margin-left:4px;
   }
   .video-cap{
-    text-align:center; font-family:var(--mono); font-size:11.5px; color:var(--ink-dim);
-    letter-spacing:.04em; margin:14px 0 0; max-width:420px; margin-left:auto; margin-right:auto;
+    text-align:center; font-family:var(--sans); font-weight:600; font-size:13.5px; color:var(--ink-dim);
+    margin:14px 0 0; max-width:440px; margin-left:auto; margin-right:auto;
   }
 
   /* ---------- Email capture ---------- */
   .capture{ text-align:center; margin:36px 0 8px; }
-  .capture h2{ font-size:23px; margin-bottom:20px; }
+  .capture h2{ font-size:23px; margin-bottom:20px; text-align:center; }
   .capture form{
-    display:flex; flex-direction:column; gap:14px; max-width:420px; margin:0 auto 18px;
+    display:flex; flex-direction:column; align-items:center; gap:14px; max-width:420px; margin:0 auto 18px;
   }
   .capture input[type=email]{
     width:100%; padding:16px 18px; border-radius:100px; border:1px solid var(--line);
-    background:#fff; color:var(--ink); font-family:var(--sans); font-size:15px;
+    background:rgba(255,255,255,.06); color:var(--ink); font-family:var(--sans); font-size:15px;
+    text-align:center;
   }
   .capture input[type=email]::placeholder{ color:var(--ink-dim); }
 
@@ -134,18 +132,18 @@
   .faq-cols{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
   .faq details{ padding:14px 0; border-bottom:1px solid var(--line); }
   .faq summary{
-    cursor:pointer; list-style:none; font-size:14.5px; font-weight:600;
-    display:flex; justify-content:space-between; gap:10px; color:var(--wine-deep);
+    cursor:pointer; list-style:none; font-size:14.5px; font-weight:700;
+    display:flex; justify-content:space-between; gap:10px; color:var(--gold-soft);
   }
   .faq summary::-webkit-details-marker{ display:none; }
   .faq summary::after{ content:'+'; color:var(--gold); font-size:16px; flex:none; }
   .faq details[open] summary::after{ content:'–'; }
-  .faq p{ font-size:13.5px; color:var(--ink-dim); margin-top:10px; }
+  .faq p{ font-size:13.5px; color:#fbf3e8; margin-top:10px; }
   @media (max-width:600px){ .faq-cols{ grid-template-columns:1fr; } }
 
   /* ---------- Modules ---------- */
   .section-head{ text-align:center; margin-bottom:32px; }
-  .section-head h2{ font-size:26px; }
+  .section-head h2{ font-size:26px; color:var(--gold-soft); }
   .section-head p{ color:var(--ink-dim); font-size:15px; margin-top:8px; }
   .modules-grid{
     display:grid; grid-template-columns:repeat(3,1fr); gap:26px 18px; margin-bottom:36px;
@@ -153,34 +151,29 @@
   .module-item{ text-align:center; }
   .module-item .circle{
     width:100%; aspect-ratio:1; border-radius:50%; margin:0 auto 12px;
-    overflow:hidden; border:3px solid var(--gold-soft);
-    box-shadow:0 8px 20px -8px rgba(89,24,21,.35);
+    overflow:hidden; border:3px solid var(--gold-deep);
+    box-shadow:0 8px 20px -8px rgba(0,0,0,.5);
   }
   .module-item .circle img{ width:100%; height:100%; object-fit:cover; }
-  .module-item p{ font-size:12.5px; color:var(--ink); font-weight:600; }
+  .module-item p{ font-size:12.5px; color:var(--ink); font-weight:700; }
   @media (max-width:560px){ .modules-grid{ grid-template-columns:repeat(3,1fr); gap:16px 10px; } }
 
   /* ---------- Testimonials ---------- */
   .testi-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
   .testi-card{
-    background:var(--card-bg); color:var(--ink); border-radius:16px;
-    padding:20px; border:1px solid var(--line);
-    box-shadow:0 8px 20px -10px rgba(89,24,21,.18);
+    background:var(--card-bg); color:var(--card-ink); border-radius:16px;
+    padding:20px; box-shadow:0 8px 20px -8px rgba(0,0,0,.4);
   }
   .testi-top{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
-  .testi-avatar{ width:38px; height:38px; border-radius:50%; flex:none; overflow:hidden; border:2px solid var(--gold-soft); }
+  .testi-avatar{ width:38px; height:38px; border-radius:50%; flex:none; overflow:hidden; border:2px solid var(--gold-deep); }
   .testi-avatar img{ width:100%; height:100%; object-fit:cover; }
   .testi-name{ font-size:13.5px; font-weight:700; }
-  .testi-stars{ color:var(--gold); font-size:12px; letter-spacing:.05em; }
-  .testi-card p{ font-size:12.5px; line-height:1.55; color:var(--ink-dim); }
-  .testi-card details{ margin-top:6px; }
-  .testi-card summary{
-    cursor:pointer; list-style:none; font-size:12px; font-weight:700; color:var(--emerald-deep);
-  }
-  .testi-card summary::-webkit-details-marker{ display:none; }
-  .testi-card details[open] summary{ display:none; }
+  .testi-loc{ font-size:11px; color:#8a6f63; }
+  .testi-stars{ color:var(--gold-deep); font-size:12px; letter-spacing:.05em; }
+  .testi-card p{ font-size:12.5px; line-height:1.6; }
   @media (max-width:560px){ .testi-grid{ grid-template-columns:1fr 1fr; gap:10px; } .testi-card{ padding:14px; } .testi-card p{ font-size:11.5px; } }
   @media (max-width:420px){ .testi-grid{ grid-template-columns:1fr; } }
+  #more-reviews{ display:none; margin-top:16px; }
 
   /* ---------- Footer ---------- */
   footer{ padding:32px 0 24px; text-align:center; border-top:1px solid var(--line); }
@@ -190,7 +183,7 @@
   /* ---------- Sticky mobile CTA ---------- */
   .sticky-cta{
     position:fixed; left:0; right:0; bottom:0; z-index:60;
-    background:rgba(247,242,234,.95); backdrop-filter:blur(10px);
+    background:rgba(56,10,11,.94); backdrop-filter:blur(10px);
     border-top:1px solid var(--line);
     padding:12px 18px; display:none; justify-content:center;
   }
@@ -212,7 +205,7 @@
 <section class="hero wrap">
   <h1>Transform Your Relationship and Deepen Your Intimacy Tonight — Without Leaving Home</h1>
   <div class="stat-line">Couples who practice mutual massage report up to <b>80%</b> improvement in communication and intimacy</div>
-  <p class="lead">A guided, step-by-step couples massage routine that turns 20 quiet minutes into real closeness — no experience, oils, or equipment required.</p>
+  <p class="lead">A guided, step-by-step couples massage routine that turns 20 quiet minutes into real closeness, no experience, or equipment profissionais required.</p>
 
   <div class="video-block">
     <div class="play"></div>
@@ -239,12 +232,12 @@
         <p>No. Every technique is explained step by step in plain language, made for complete beginners.</p>
       </details>
       <details>
-        <summary>How long does a session take?</summary>
-        <p>Most full routines run 20–30 minutes — short enough for a weeknight.</p>
+        <summary>How long will it take to learn?</summary>
+        <p>The course is dynamic and practical; in less than 30 minutes, you'll be ready to enjoy a special moment as a couple.</p>
       </details>
       <details>
         <summary>What do we need to get started?</summary>
-        <p>Just a towel and any neutral oil you already have at home.</p>
+        <p>You will receive an exclusive PDF containing a list of essentials, meditation music, essential oils and their functions, a reflexology (foot massage) map, and recipe tips for beforehand.</p>
       </details>
     </div>
     <div>
@@ -267,15 +260,15 @@
 <section class="section wrap" id="modules">
   <div class="section-head">
     <h2>Modules</h2>
-    <p>Six guided routines, each focused on a different part of reconnecting through touch.</p>
+    <p>Six modules, each focused on a specific part of the body, to foster connection and relaxation.</p>
   </div>
   <div class="modules-grid">
-    <div class="module-item"><div class="circle"><img src="module-face-neck.jpg" alt="Face and neck touch"></div><p>Face &amp; Neck</p></div>
-    <div class="module-item"><div class="circle"><img src="module-back-shoulders.jpg" alt="Back and shoulders massage"></div><p>Back &amp; Shoulders</p></div>
-    <div class="module-item"><div class="circle"><img src="module-full-flow.jpg" alt="Full body flow massage"></div><p>Full-Body Flow</p></div>
-    <div class="module-item"><div class="circle"><img src="module-legs.jpg" alt="Legs and calves massage"></div><p>Legs &amp; Calves</p></div>
+    <div class="module-item"><div class="circle"><img src="module-face-neck.jpg" alt="Head massage"></div><p>Head</p></div>
+    <div class="module-item"><div class="circle"><img src="module-back-shoulders.jpg" alt="Arms massage"></div><p>Arms</p></div>
+    <div class="module-item"><div class="circle"><img src="module-full-flow.jpg" alt="Back massage"></div><p>Back</p></div>
+    <div class="module-item"><div class="circle"><img src="module-legs.jpg" alt="Legs massage"></div><p>Legs</p></div>
     <div class="module-item"><div class="circle"><img src="module-feet.jpg" alt="Feet massage"></div><p>Feet</p></div>
-    <div class="module-item"><div class="circle"><img src="module-deep-pressure.jpg" alt="Deep pressure technique"></div><p>Deep Pressure</p></div>
+    <div class="module-item"><div class="circle"><img src="module-deep-pressure.jpg" alt="Stretches"></div><p>Stretches</p></div>
   </div>
   <div class="btn-row">
     <a href="https://hotmart.com/pt-BR/club/brendo-carvalho-de-oliveira" class="btn btn-primary">I Want More Connection »</a>
@@ -286,27 +279,72 @@
   <div class="section-head"><h2>What Couples Are Saying</h2></div>
   <div class="testi-grid">
     <div class="testi-card">
-      <div class="testi-top"><div class="testi-avatar"><img src="avatar-face-neck.jpg" alt="Elif and Mert"></div><div class="testi-name">Elif &amp; Mert</div></div>
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-face-neck.jpg" alt="Elif and Mert"></div><div><div class="testi-name">Elif &amp; Mert</div><div class="testi-loc">Istanbul, Turkey</div></div></div>
       <div class="testi-stars">★★★★★</div>
-      <p>We tried this on a random Tuesday and ended up talking for an hour after. So simple to follow.</p>
+      <p>We'd fallen into a routine where we barely touched unless we were saying goodnight. The first session felt awkward for about five minutes, and then something shifted — we ended up talking for an hour afterward about things we hadn't said out loud in months. It's become our Tuesday ritual now.</p>
     </div>
     <div class="testi-card">
-      <div class="testi-top"><div class="testi-avatar"><img src="avatar-back-shoulders.jpg" alt="Sarah and James"></div><div class="testi-name">Sarah &amp; James</div></div>
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-back-shoulders.jpg" alt="Sarah and James"></div><div><div class="testi-name">Sarah &amp; James</div><div class="testi-loc">Valletta, Malta</div></div></div>
       <div class="testi-stars">★★★★★</div>
-      <p>Honestly didn't expect much from a digital guide, but the instructions were clear enough that neither of us felt awkward or unsure what to do with our hands.
-      <details><summary>Read more</summary> By the second week it stopped feeling like "following steps" and started feeling like our own little ritual — we now save Sunday nights for it on purpose.</details></p>
+      <p>Honestly didn't expect much, but the instructions were clear enough that neither of us felt unsure what to do. By the second week it stopped feeling like "following steps" and started feeling like our own ritual — we save Sunday nights for it on purpose now.</p>
     </div>
     <div class="testi-card">
-      <div class="testi-top"><div class="testi-avatar"><img src="avatar-feet.jpg" alt="Zeynep and Can"></div><div class="testi-name">Zeynep &amp; Can</div></div>
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-feet.jpg" alt="Zeynep and Can"></div><div><div class="testi-name">Zeynep &amp; Can</div><div class="testi-loc">Ankara, Turkey</div></div></div>
       <div class="testi-stars">★★★★★</div>
-      <p>We're not "spa people" but this made it approachable. Now it's our Friday reset.</p>
+      <p>We're not "spa people" at all, but this made it approachable enough that neither of us felt silly. It's our Friday reset now, and honestly the one hour of the week we both look forward to most.</p>
     </div>
     <div class="testi-card">
-      <div class="testi-top"><div class="testi-avatar"><img src="avatar-deep-pressure.jpg" alt="Ayşe and Deniz"></div><div class="testi-name">Ayşe &amp; Deniz</div></div>
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-deep-pressure.jpg" alt="Ayşe and Deniz"></div><div><div class="testi-name">Ayşe &amp; Deniz</div><div class="testi-loc">Izmir, Turkey</div></div></div>
       <div class="testi-stars">★★★★★</div>
-      <p>What sold me was how practical it is — no incense-and-crystals vibe, just clear hand placements and pacing.
-      <details><summary>Read more</summary> We've gone back to the feet and shoulders routines the most since they're easiest to do on a regular weeknight, and my partner actually asks for it now instead of the other way around.</details></p>
+      <p>What sold me was how practical it is — clear hand placements and pacing, nothing precious about it. We've gone back to the feet and shoulders routines the most, and my partner actually asks for it now instead of the other way around.</p>
     </div>
+  </div>
+
+  <div id="more-reviews" class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-full-flow.jpg" alt="Giulia and Marco"></div><div><div class="testi-name">Giulia &amp; Marco</div><div class="testi-loc">Milan, Italy</div></div></div>
+      <div class="testi-stars">★★★★★</div>
+      <p>We work opposite schedules and had gotten used to feeling more like roommates than partners. Twenty minutes, twice a week, has quietly undone a lot of that distance. Nothing dramatic — just more hands on shoulders, more eye contact, more of the small stuff we'd stopped doing.</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-legs.jpg" alt="Francesca and Luca"></div><div><div class="testi-name">Francesca &amp; Luca</div><div class="testi-loc">Turin, Italy</div></div></div>
+      <div class="testi-stars">★★★★★</div>
+      <p>Simple and well explained, no guesswork.</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-face-neck.jpg" alt="Camila and Matías"></div><div><div class="testi-name">Camila &amp; Matías</div><div class="testi-loc">Santiago, Chile</div></div></div>
+      <div class="testi-stars">★★★★★</div>
+      <p>We bought this after a rough year — new baby, no sleep, zero time for each other. It didn't fix everything, obviously, but it gave us a reason to close the door for twenty minutes and just be a couple again instead of two exhausted co-parents. That mattered more than I expected.</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-back-shoulders.jpg" alt="Valentina and Santiago"></div><div><div class="testi-name">Valentina &amp; Santiago</div><div class="testi-loc">Bogotá, Colombia</div></div></div>
+      <div class="testi-stars">★★★★★</div>
+      <p>The foot routine alone was worth it for us. My partner carries all his stress in his shoulders and feet, and now it's part of how we wind down instead of just scrolling on separate sides of the bed.</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-feet.jpg" alt="Lucía and Nicolás"></div><div><div class="testi-name">Lucía &amp; Nicolás</div><div class="testi-loc">Montevideo, Uruguay</div></div></div>
+      <div class="testi-stars">★★★★★</div>
+      <p>We'd tried date nights, apps, all of it. This is the first thing that actually became a habit, mostly because it's short enough that we never have an excuse to skip it. Small thing, but it's added up over a couple of months.</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-deep-pressure.jpg" alt="Carmen and Álvaro"></div><div><div class="testi-name">Carmen &amp; Álvaro</div><div class="testi-loc">Madrid, Spain</div></div></div>
+      <div class="testi-stars">★★★★★</div>
+      <p>Twelve years together and I genuinely thought we'd tried everything to keep things warm between us. The PDF extras — the oil guide especially — turned out to be a nice surprise on top of the routines themselves.</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-full-flow.jpg" alt="Sofía and Diego"></div><div><div class="testi-name">Sofía &amp; Diego</div><div class="testi-loc">Barcelona, Spain</div></div></div>
+      <div class="testi-stars">★★★★★</div>
+      <p>Clear, calm, and not at all awkward once you get past the first few minutes.</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-avatar"><img src="avatar-legs.jpg" alt="Deniz and Efe"></div><div><div class="testi-name">Deniz &amp; Efe</div><div class="testi-loc">Bursa, Turkey</div></div></div>
+      <div class="testi-stars">★★★★★</div>
+      <p>What surprised me most is how much better we started communicating outside of the sessions too — it's like practicing slowing down together for twenty minutes carried over into the rest of the week. We argue less and actually listen more.</p>
+    </div>
+  </div>
+
+  <div class="btn-row" style="margin-top:24px;">
+    <a href="#" class="btn btn-primary" onclick="document.getElementById('more-reviews').style.display='grid'; this.style.display='none'; return false;">See More Reviews</a>
   </div>
 </section>
 
