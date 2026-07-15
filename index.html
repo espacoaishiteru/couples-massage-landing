@@ -133,13 +133,14 @@
   .faq details{ padding:14px 0; border-bottom:1px solid var(--line); }
   .faq summary{
     cursor:pointer; list-style:none; font-size:14.5px; font-weight:700;
-    display:flex; justify-content:space-between; gap:10px; color:var(--gold-soft);
+    color:var(--gold-soft); position:relative; padding-right:26px;
+    word-wrap:break-word; overflow-wrap:break-word;
   }
   .faq summary::-webkit-details-marker{ display:none; }
-  .faq summary::after{ content:'+'; color:var(--gold); font-size:16px; flex:none; }
+  .faq summary::after{ content:'+'; color:var(--gold); font-size:16px; position:absolute; right:0; top:0; }
   .faq details[open] summary::after{ content:'–'; }
-  .faq p{ font-size:13.5px; color:#fbf3e8; margin-top:10px; }
-  @media (max-width:600px){ .faq-cols{ grid-template-columns:1fr; } }
+  .faq p{ font-size:13.5px; color:#fbf3e8; margin-top:10px; word-wrap:break-word; overflow-wrap:break-word; }
+  @media (max-width:680px){ .faq-cols{ grid-template-columns:1fr; gap:0; } }
 
   /* ---------- Modules ---------- */
   .section-head{ text-align:center; margin-bottom:32px; }
