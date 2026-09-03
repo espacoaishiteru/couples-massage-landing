@@ -92,11 +92,13 @@
 
   /* ---------- Video block ---------- */
   .video-block{
-    margin:32px auto 10px; max-width:520px; aspect-ratio:16/10; border-radius:18px;
+    margin:32px auto 10px; max-width:520px; border-radius:18px;
     background:linear-gradient(160deg, #241012, #120708);
     border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:center; position:relative;
     overflow:hidden;
+  }
+  .video-block video{
+    width:100%; height:auto; display:block;
   }
   .video-block .play{
     width:64px; height:64px; border-radius:50%;
@@ -195,6 +197,10 @@
     body{ padding-bottom:74px; }
   }
 </style>
+
+<!-- COLE AQUI o código do Pixel do Meta (Gerenciador de Eventos > Instalar código manualmente).
+     Ele começa com <script> e termina com </noscript>. Cole tudo, sem alterar nada. -->
+
 </head>
 <body>
 
@@ -211,7 +217,11 @@
   <p class="lead">A guided, step-by-step couples massage routine that turns 20 quiet minutes into real closeness, no experience, or equipment profissionais required.</p>
 
   <div class="video-block">
-    <div class="play"></div>
+    <!-- Este vídeo é o arquivo couples-massage-video.mp4 que deve ficar
+         na mesma pasta deste index.html, dentro do seu repositório. -->
+    <video controls playsinline preload="metadata">
+      <source src="couples-massage-video.mp4" type="video/mp4">
+    </video>
   </div>
   <p class="video-cap">This is not a professional massage certification — it's a simple, guided way to reconnect through touch.</p>
 </section>
